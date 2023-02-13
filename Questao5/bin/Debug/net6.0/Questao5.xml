@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Questao5</name>
+    </assembly>
+    <members>
+        <member name="M:Questao5.Infrastructure.Services.Controllers.ContaCorrenteController.Moviment(System.Int32,System.Decimal,System.String)">
+             <summary>
+             Movimenta a Conta Corrente - Debitando ou Creditando um valor
+             </summary>
+             <remarks>
+             Exemplo:
+            
+                 POST /api/contacorrente
+                 {
+                    "numeroconta": 123,
+                    "valor": "500",
+                    "movimento": "C"
+                 }
+            
+             </remarks>
+             <param name="value"></param>
+             <returns>Um novo item criado</returns>
+             <response code="200">Retorna o ID da Movimentação.</response>
+             <response code="400">Se a movimentação não foi executada com sucesso, devido há algum parâmetro incorreto.</response>    
+             <response code="500">Se a ocorrer algum erro interno no servidor.</response> 
+        </member>
+        <member name="M:Questao5.Infrastructure.Services.Controllers.ContaCorrenteController.GetBalance(System.Int32)">
+             <summary>
+             Executa uma consulta na movimentação da Conta Corrente informada, deve se informar o Número da Conta
+             </summary>
+             <remarks>
+             Exemplo:
+            
+                 GET /api/contacorrente
+                 {
+                    "numeroconta": 123               
+                 }
+            
+             </remarks>
+             <param name="value"></param>
+             <returns>Um novo item criado</returns>
+             <response code="200">Retorna se a movimentação da Conta informada for encontrada.</response>
+             <response code="400">Se a movimentação não foi encontrada, devido algum parâmetro incorreto.</response>    
+             <response code="500">Se a ocorrer algum erro interno no servidor.</response> 
+        </member>
+    </members>
+</doc>
